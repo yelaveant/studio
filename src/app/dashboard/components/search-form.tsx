@@ -1,6 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
 import { searchDocuments } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Archive, Download, FileText, Loader2, Search, TriangleAlert } from 'lucide-react';
 import type { SearchState } from '@/lib/types';
-import { useEffect, useRef } from 'react';
+
 
 const initialState: SearchState = {
   message: null,
@@ -38,7 +39,7 @@ function SubmitButton() {
 }
 
 export function SearchForm() {
-  const [state, formAction] = useFormState(searchDocuments, initialState);
+  const [state, formAction] = useActionState(searchDocuments, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
