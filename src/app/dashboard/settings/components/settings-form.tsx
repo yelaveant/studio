@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useFormStatus } from "react-dom";
@@ -60,11 +61,11 @@ export function SettingsForm() {
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div className="space-y-2">
                             <Label htmlFor="ipAddress">Dirección IP del Servidor</Label>
-                            <Input id="ipAddress" name="ipAddress" placeholder="192.168.1.134" defaultValue="192.168.1.134"/>
+                            <Input id="ipAddress" name="ipAddress" placeholder="192.168.1.200" defaultValue="192.168.1.200"/>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="sharedFolder">Ruta de Carpeta Compartida</Label>
-                            <Input id="sharedFolder" name="sharedFolder" placeholder="\install\datasun3\..." defaultValue="\install\datasun3\botica\sunat_archivos\sfs\"/>
+                            <Input id="sharedFolder" name="sharedFolder" placeholder="\Sistemas\DATASUN" defaultValue="\Sistemas\DATASUN"/>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
