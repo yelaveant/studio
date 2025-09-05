@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Download, FileText, FileZip, Loader2, Search, TriangleAlert } from 'lucide-react';
+import { Archive, Download, FileText, Loader2, Search, TriangleAlert } from 'lucide-react';
 import type { SearchState } from '@/lib/types';
 import { useEffect, useRef } from 'react';
 
@@ -124,7 +124,7 @@ export function SearchForm() {
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Archivo CDR (RPTA)</CardTitle>
-                            <FileZip className="h-4 w-4 text-muted-foreground" />
+                            <Archive className="h-4 w-4 text-muted-foreground" />
                         </CardHeader>
                         <CardContent>
                              <p className="text-xs text-muted-foreground break-all">{state.files.cdr.name}</p>
