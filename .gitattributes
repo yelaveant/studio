@@ -1,0 +1,40 @@
+# Fuerza a Git a manejar finales de línea de forma consistente
+* text=auto eol=lf
+
+# Archivos JavaScript y TypeScript como texto
+*.js  text diff=javascript
+*.jsx text diff=javascript
+*.ts  text diff=typescript
+*.tsx text diff=typescript
+
+# Archivos de configuración
+*.json text
+*.yml  text
+*.yaml text
+*.md   text
+*.css  text
+*.scss text
+
+# Archivos de entorno y secretos (se mantienen como texto, pero recuerda que no deben estar en GitHub)
+*.env  text
+
+# Archivos binarios (sin diffs)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz  binary
+*.woff binary
+*.woff2 binary
+
+# Documentación (Markdown siempre tratado como texto)
+*.md text
+
+# Evitar conflictos en lockfiles
+package-lock.json merge=union
+yarn.lock merge=union
+pnpm-lock.yaml merge=union
