@@ -5,3 +5,25 @@ runConfig:
   # Increase this value if you'd like to automatically spin up
   # more instances in response to increased traffic.
   maxInstances: 1
+
+ # apphosting.yaml
+run:
+  # Comando para compilar la app Next.js
+  command: npm run build
+
+  # Comando para arrancar la app en producción
+  serve: npm run start
+
+  # Directorio de salida
+  workingDir: ./
+
+# Configuración del entorno
+env:
+  - variable: NODE_ENV
+    value: production
+
+# Opcional: Si quieres cachear dependencias y acelerar el build
+build:
+  command: npm install
+
+
